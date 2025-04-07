@@ -13,10 +13,10 @@ public class Student extends Member {
   private int yearOfAdmission;
   private int grade;
 
-  public Student(String name, int birthyear, String gender, int yearofadmission, int grade) {
-    super(name, birthyear, gender);
+  public Student(String name, int birthYear, String gender, int yearOfAdmission, int grade) {
+    super(name, birthYear, gender);
     this.id = nextId++;
-    this.yearOfAdmission = yearofadmission;
+    this.yearOfAdmission = yearOfAdmission;
     this.grade = grade;
     studentList.add(this);
   }

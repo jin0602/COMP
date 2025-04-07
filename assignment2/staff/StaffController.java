@@ -9,10 +9,6 @@ public class StaffController {
     return Staff.staffList;
   }
 
-  public Staff getStaff(int id) {
-    return Staff.staffList.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
-  }
-
   public void removeStaff(int id) {
     Staff.staffList.removeIf(x -> x.getId() == id);
   }

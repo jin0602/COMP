@@ -9,10 +9,6 @@ public class StudentController {
     return Student.studentList;
   }
 
-  public Student getStudent(int id) {
-    return Student.studentList.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
-  }
-
   public void removeStudent(int id) {
     Student.studentList.removeIf(x -> x.getId() == id);
   }

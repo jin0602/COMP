@@ -16,6 +16,21 @@ public class Main {
     int operation, gSelect, id;
     while (true) {
       operation = input("Please select your operation:\n1.remove\n2.add\n3.list\n4.find");
+      switch (operation) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+          break;
+        default:
+          System.out.println("Please enter a valid option!");
+          flag = true;
+          break;
+      }
+      if (flag) {
+        flag = false;
+        continue;
+      }
       gSelect = input("Please select a category:\n1.staff\n2.student");
       switch (operation) {
         case 1://remove
@@ -34,7 +49,7 @@ public class Main {
             staffController.addStaff(vars);
           } else {
             System.out.println(
-                "Please enter the information you want to add (name, birth year, gender, year of joining, salary): ");
+                "Please enter the information you want to add (name, birth year, gender, year of admission, grade): ");
             String[] vars = sc.nextLine().split(",");
             studentController.addStudent(vars);
           }
@@ -53,13 +68,6 @@ public class Main {
 //            System.out.println(studentController.getStudentList());
 //          }
 //          break;
-        default://else
-          System.out.println("Please enter a valid option!");
-          flag = true;
-          break;
-      }
-      if (flag) {
-        break;
       }
     }
   }

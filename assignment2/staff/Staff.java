@@ -13,10 +13,10 @@ public class Staff extends Member {
   private int yearOfJoining;
   private int salary;
 
-  public Staff(String name, int birthyear, String gender, int yearofjoining, int salary) {
-    super(name, birthyear, gender);
+  public Staff(String name, int birthYear, String gender, int yearOfJoining, int salary) {
+    super(name, birthYear, gender);
     this.id = nextId++;
-    this.yearOfJoining = yearofjoining;
+    this.yearOfJoining = yearOfJoining;
     this.salary = salary;
     staffList.add(this);
   }
